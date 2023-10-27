@@ -1,0 +1,112 @@
+.section-approach{
+	position: relative;
+	background-color: $tertiarylight;
+	padding: 40px 0;
+	overflow: visible;
+	.container{
+		position: relative;
+		z-index: 3;
+		.approach-row{
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 40px;
+			.approach-title{
+				@include font2;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 35px;
+				line-height: 41px;
+				text-align: center;
+				letter-spacing: -1.8px;
+				color: $white;
+				@media (min-width: 768px){
+					font-size: 46px;
+					line-height: 52px;
+				}
+			}
+			.approach-text{
+				@include font1;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 26px;
+				text-align: center;
+				color: $white;
+			}
+		}
+		.approach-items{
+			justify-content: space-evenly;
+			row-gap: 40px;
+			align-items: start;
+			.approach-item-image{
+				width: 163px;
+				height: 163px;
+				text-align: center;
+				img{
+					object-fit: cover;
+					object-position: center;
+					width: 163px;
+					height: 163px;
+				}
+			}
+			.approach-item{
+				display: flex;
+				flex-direction: column;
+				justify-content: start;
+				align-items: center;
+				flex: 0 0 auto;
+				max-width: 332px;
+				row-gap: 17px;
+				.approach-item-title{
+					@include font2;
+					font-style: normal;
+					font-weight: bold;
+					font-size: 22px;
+					line-height: 26px;
+					letter-spacing: 0.1px;
+					text-transform: capitalize;
+					color: $white;
+				}
+				.approach-item-text{
+					@include font2;
+					font-style: normal;
+					font-weight: bold;
+					font-size: 16px;
+					line-height: 23px;
+					text-align: center;
+					color: $white;
+				}
+				
+			}
+		}
+		.btn-container{
+			justify-content: center;
+			margin: 53px 0 270px;
+			@media (min-width: 768px){
+				margin: 52px 0 400px;
+			}
+			@media (min-width: 1200px){
+				margin: 80px 0 120px;
+			}
+		}
+	}
+	.approach-img{
+		overflow: hidden;
+		position: absolute;
+		display: block;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: fit-content;
+		max-height: 1200px;
+		img{
+			position: relative;
+			object-fit: cover;
+			object-position: bottom;
+			width: 100%;
+			height: auto;
+			max-height: calc(100% + 42px);
+			z-index: 1;
+		}
+	}
+}

@@ -1,0 +1,111 @@
+.success{
+	padding: 80px 0;
+	position: relative;
+	background-color: $primarylight;
+	.success-content-text p{
+		@include font1;
+		color: $white;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 26px;
+		text-align: center;
+		@media (min-width: 768px){
+			text-align: left;
+		}
+	}
+	.success-title{
+		color: $tertiary;
+		text-align: center;
+		@media (min-width: 768px){
+			text-align: left;
+		}
+	}
+	.success-items{
+		margin-top: 32px;
+		margin-bottom: 32px;
+		row-gap: 30px;
+	}
+	.success-item{
+		display: flex;
+		flex-direction: column;
+		row-gap: 21px;
+		@media (min-width: 768px){
+			align-items: flex-start;
+		}
+		.success-header{
+			display: flex;
+			column-gap: 18px;
+			justify-content: center;
+			align-items: center;
+			.success-number{
+				@include font1;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 51px;
+				line-height: 52px;
+				letter-spacing: -1.8px;
+				color: $white;
+			}
+			@media (min-width: 992px){
+				justify-content: start;
+			}
+		}
+		.success-text{
+			@include font2;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 22px;
+			color: $tertiary;
+			// text-align: center;
+			> span{
+				font-size: 21px !important;
+				line-height: 22px;
+				color: $white !important;
+			}
+			@media (min-width: 992px){
+				// text-align: left;
+			}
+		}
+	}
+	.btn-container{
+		// padding: 60px 0 100px;
+		justify-content: center;
+		@media (min-width: 576px){
+			justify-content: start;
+		}
+	}
+	.img-wrapper{
+		width: 380px;
+		transition: all 0.4s ease;
+		margin: auto;
+		display: block;
+		img{
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+		@media (min-width: 768px) and (max-width: 1911.98px){
+			// width: 380px;
+			// bottom: 300px;
+			// right: 0;
+			// display: block;
+		}
+		@media (min-width: 1200px) and (max-width: 1279.98px){
+			// width: 340px;
+			// bottom: 0;
+			// right: 0;
+			// display: block;
+		}
+		@media (min-width: 1280px){
+			width: 546px;
+			height: 521px;
+			
+			margin-bottom: -100px;
+			margin-top: -130px;
+			position: relative;
+			z-index: 2;
+		}
+	}
+}

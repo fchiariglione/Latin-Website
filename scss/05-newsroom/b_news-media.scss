@@ -1,0 +1,24 @@
+.news-media{
+    h2{
+        color: $primary;
+        @include font2;
+        font-weight: 800;
+        letter-spacing: 0.1px;
+        text-align: center;
+    }
+    .row-media{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        .col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                margin: auto;
+                object-fit: contain;
+            }
+        }
+        
+    }
+}

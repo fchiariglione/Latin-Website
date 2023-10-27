@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Bnt_Pause" width="24.971" height="24.971" viewBox="0 0 24.971 24.971">
+    <defs>
+        <style>
+            .cls-3{fill:none;stroke:#c4c4c4;stroke-linecap:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="Path_41" fill="none" stroke="none">
+        <path d="M12.485 0A12.485 12.485 0 1 1 0 12.485 12.485 12.485 0 0 1 12.485 0z" transform="translate(0 0)"/>
+        <path fill="#c4c4c4" d="M12.485 1C9.418 1 6.533 2.195 4.364 4.364 2.194 6.534 1 9.418 1 12.485c0 3.068 1.195 5.952 3.364 8.122 2.17 2.17 5.054 3.364 8.121 3.364 3.068 0 5.952-1.195 8.122-3.364 2.17-2.17 3.364-5.054 3.364-8.122 0-3.067-1.195-5.952-3.364-8.121C18.437 2.194 15.553 1 12.485 1m0-1c6.896 0 12.486 5.59 12.486 12.485 0 6.896-5.59 12.486-12.486 12.486C5.59 24.97 0 19.38 0 12.485 0 5.59 5.59 0 12.485 0z" transform="translate(0 0)"/>
+    </g>
+    <g id="Group_3002" transform="translate(4.343 4.343)">
+        <path id="Rectangle_33" fill="none" d="M0 0H17V17H0z" transform="translate(-0.341 -0.343)"/>
+    </g>
+    <g id="Group_3015" transform="translate(10.857 7.929)">
+        <path id="Path_43" d="M0 0v8.865" class="cls-3" transform="translate(0 0)"/>
+        <path id="Path_42" d="M0 0v8.865" class="cls-3" transform="translate(4.262 0)"/>
+    </g>
+</svg>

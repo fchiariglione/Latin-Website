@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" viewBox="0 0 28 27">
+    <g transform="translate(0.234 0)">
+        <ellipse cx="14" cy="13.5" fill="#eaeaea" rx="14" ry="13.5" transform="translate(-0.234 0)"/>
+        <g>
+            <g>
+                <g>
+                    <path fill="#818181" d="M50.319 0l-1.412 1.412 4.576 4.576-4.576 4.576 1.412 1.412 5.988-5.988z" transform="translate(8.28 7.085) translate(3.063 0.612) translate(0) translate(-48.907)"/>
+                </g>
+            </g>
+            <path fill="none" d="M0 0H14V14H0z" transform="translate(8.28 7.085) translate(-0.514 -0.085)"/>
+        </g>
+    </g>
+</svg>

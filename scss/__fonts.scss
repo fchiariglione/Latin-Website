@@ -1,0 +1,13 @@
+@mixin font1{
+  font-family: 'sanchez', serif;
+}
+@mixin font2{
+  font-family: 'calluna', serif;
+}
+
+@font-face {
+  font-family: 'sanchez';
+  src: url('../webfonts/Sanchezregular.otf');
+}
+
+

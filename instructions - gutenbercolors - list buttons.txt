@@ -1,0 +1,24 @@
+
+"primary"          => "#242B58",
+"primarylight"     => "#2E3770",
+"primarydark"      => "#353962",
+"secondary"        => "#BC5017",
+"tertiary"         => "#C0B5F4",
+"tertiarylight"    => "#6D6A95",
+"tertiarylighter"  => "#D9D7FF",
+"tertiarydark"     => "#3F275D",
+"grey"             => "#F2F4FE",
+"greydark"         => "#F1F3FE",
+"white"            => "#ffffff",
+"black"            => "#181B33",
+
+---------------------------------------------------------------
+
+Buttons List Select 
+
+btn-1 secondary : Orange to Blue
+btn-1 secondary2 : Orange to Purpule
+btn-1 tertiary : Purpule
+btn-2 arrow: Button With arrow
+
+---------------------------------------------------------------

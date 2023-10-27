@@ -1,0 +1,155 @@
+/*START Interior Top (BANNER)--------------------------------------------------*/
+.interior-banner {
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  min-height: 504px;
+  // @media (min-width: 1200px){
+  // }
+  // @media (max-width: 991.98px){
+  //   min-height: 370px;
+  // }
+  .banner-wrapping{
+    height: 100%;
+    padding-top: inherit !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    @media (max-width: 991.98px){
+      width: 100%;
+    }
+    img{
+      height: 100%;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+      width: 100%;
+      z-index: 1;
+      &.top{
+        object-position: top;
+      }
+      &.center{
+        object-position: center;
+      }
+      &.bottom{
+        object-position: bottom;
+      }
+    }
+    &::before{
+      content: "";
+      background: linear-gradient(180deg, rgba(36, 43, 88, 0.86) 25.48%, rgba(36, 43, 88, 0) 129.28%);
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+    &::after{
+      content: none;
+      height: 100%;
+      opacity: 0.18;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+  .title-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    min-width: inherit;
+    position: relative;
+    text-align: left;
+    width: 60%;
+    z-index: 10;
+    min-height: 504px;
+    max-height: 100%;
+    @media (max-width: 991.98px){
+      width: 90%;
+    }
+    @media (max-width: 575.98px){
+      width: 100%;
+    }
+    h1, h2{
+      @include font2;
+      color: $white;
+      font-size: 70px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 1;
+      margin: 0 0 10px 0!important;
+      text-transform: capitalize !important;
+      display: inline-block !important;
+      &::selection {
+        background-color: $selector_color;
+        color: white;
+      }
+      @media (max-width: 1199.98px){
+        font-size: 40px !important;
+        line-height: 1;
+      }
+      @media (max-width: 575.98px){
+        font-size: 35px !important;
+      }
+      .title-purpule{
+        @include font2;
+        color: $tertiary !important;
+        font-size: 70px;
+        font-stretch: normal;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: normal;
+        line-height: 1;
+        margin: 0 0 10px 0!important;
+        text-transform: capitalize !important;
+        display: inline-block !important;
+        &::selection {
+          background-color: $selector_color;
+          color: white;
+        }
+        @media (max-width: 1199.98px){
+          font-size: 40px !important;
+          line-height: 1;
+        }
+        @media (max-width: 575.98px){
+          font-size: 35px !important;
+        }
+      }
+    }
+    p{
+      @include font1;
+      color: $white !important;
+      font-size: 17px;
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 1.53;
+      margin: 0;
+      strong{
+        color: $white !important;
+        font-weight: bold !important;
+        letter-spacing: normal;
+        line-height: 1.53;
+      }
+      &::selection {
+        background-color: $selector_color;
+        color: white;
+      }
+    }
+  }
+  &.i-singular-post, &.i-single{
+    .title-page{
+      h1{ 
+        font-size: 45px !important;
+      }
+    }
+  }
+}
+/*END Interior Top (BANNER)------------------------------------------*/

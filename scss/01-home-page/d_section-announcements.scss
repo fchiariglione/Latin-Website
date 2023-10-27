@@ -1,0 +1,327 @@
+.section-announcements{
+    padding-bottom: 200px;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 250px;
+        bottom: 0;
+        left: 0;
+        background-image: url('../images/announcements-bg.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: bottom;
+        z-index: 0;
+        @media (min-width: 768px){
+            height: 404px;
+        }
+    }
+    h3{
+        font-size: 21px;
+        @include font2;
+        color: $primary;
+        text-align: center;
+        letter-spacing: 0.1px;
+        text-transform: capitalize;
+        z-index: 1;
+        @media (min-width: 768px){
+            font-size: 31px;
+        }
+        margin-bottom: 0;
+
+    }
+    .news{
+        display: block;
+        z-index: 1;
+        .news-item{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+            align-items: start;
+            row-gap: 10px;
+            z-index: 1;
+            &::after{
+                content: "";
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: linear-gradient(90deg, #046BAC, #BAD37E);
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+            }
+            &:last-child{
+                &::after{
+                    content: none;
+                    display: none;
+                }
+            }
+            .news-date{
+                @include font1;
+                font-weight: 600;
+                font-size: 14px;
+                letter-spacing: 0.1px;
+                padding-left: 23px;
+                color: $primary;
+                position: relative;
+                margin-top: 46px;
+                z-index: 1;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    left: 0;
+                    top: 0;
+                    width: 16px;
+                    height: 16px;
+                    background-image: url('../images/icons/calendar-tertiary.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    opacity: 1;
+                    transition: all 0.4s ease-in-out;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    left: 0;
+                    top: 0;
+                    width: 16px;
+                    height: 16px;
+                    background-image: url('../images/icons/calendar-primarylight.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    opacity: 0;
+                    transition: all 0.4s ease-in-out;
+                }
+
+            }
+            .news-title{
+                @include font1;
+                color: $primary;
+                font-size: 21px;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: 0.1px;
+                margin-bottom: 46px;
+                z-index: 1;
+            }
+            @media (min-width: 768px){
+                .news-title{
+                    font-size: 28px;
+                }
+                &:hover, &:active, &:focus{
+                    .news-date{
+                        color: $primarylight;
+                        &::before{
+                            opacity: 0;
+                        }
+                        &::after{
+                            opacity: 1;
+                        }
+                    }
+                    .news-title{
+                        color: $primarylight;
+                    }
+                }
+            }
+        }
+    }
+    .events{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 46px;
+        z-index: 1;
+        .event-item{
+            position: relative;
+            padding: 22px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.4s ease-in-out;
+            &::before{
+                content: "";
+                position: absolute;
+                display: block;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 5px;
+                background: linear-gradient(180deg, #046BAC 0%, #BAD37E 100%);
+                opacity: 0;
+                transition: opacity 0.4s ease-in-out;
+                z-index: 0;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg, #046BAC 0%, #003555 100%);
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+                border-radius: 10px;
+                opacity: 1;
+                z-index: 0;
+                transition: opacity 0.4s ease-in-out;
+            }
+            > span{
+                display: block;
+                flex: 0 0 100%;
+                z-index: 1;
+                position: relative;
+            }
+            .event-date span{
+                @include font2;
+                color: $secondary;
+                font-size: 21px;
+                line-height: 1;
+                font-weight: 700;
+                letter-spacing: 0.2px;
+                text-transform: uppercase;
+                margin-bottom: 7px;
+                z-index: 1;
+            }
+            .event-title, .event-address{
+                @include font1;
+                color: $white;
+                font-size: 16px;
+                line-height: 1.12;
+                letter-spacing: 0.2px;
+                text-transform: capitalize;
+                margin-bottom: 7px;
+                z-index: 1;
+            }
+            .event-title{
+                font-weight: 700;
+            }
+            .event-address{
+                font-weight: 400;
+            }
+            .event-location{
+                position: relative;
+                @include font1;
+                color: $white;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 19px;
+                padding-left: 12px;
+                z-index: 1;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 6px;
+                    height: 9px;
+                    display: block;
+                    left: 0;
+                    bottom: 5px;
+                    background-image: url('../images/icons/icon-location.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    opacity: 1;
+                    transition: opacity 0.4s ease-in-out;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 6px;
+                    height: 9px;
+                    display: block;
+                    left: 0;
+                    bottom: 5px;
+                    background-image: url('../images/icons/icon-location-black.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    opacity: 0;
+                    transition: opacity 0.4s ease-in-out;
+                }
+            }
+            @media (min-width: 768px){
+                display: grid;
+                grid-template-columns: 3fr 7fr;
+                grid-template-rows: auto;
+                grid-template-areas: "date title" "date address" "date location";
+                &::before{
+                    opacity: 1 !important;
+                }
+                &::after{
+                    opacity: 0 !important;
+                }
+                .event-date{
+                    grid-area: date;
+                    span{
+                        display: block;
+                        color: $primarylight;
+                        text-align: center;
+                    }
+                    .number {
+                        font-size: 50px
+                    }
+                    .month{
+                        font-size: 28px;
+                    }
+                }
+                .event-title{
+                    grid-area: title;
+                    font-size: 18px;
+                    color: $text;
+                }
+                .event-address{
+                    grid-area: address;
+                    color: $text;
+                }
+                .event-location{
+                    grid-area: location;
+                    color: $text;
+                    &::before{
+                        opacity: 0;
+                        bottom: 11px;
+                    }
+                    &::after{
+                        opacity: 1;
+                        bottom: 11px;
+                    }
+                }
+                &:hover, &:active, &:focus{
+                    &::before{
+                        opacity: 0 !important;
+                    }
+                    &::after{
+                        opacity: 1 !important;
+                    }
+                    span, span > span{
+                        color: $white;
+                    }
+                    .event-location{
+                        color: $white;
+                        &::before{
+                            opacity: 1;
+                        }
+                        &::after{
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .btn-container{
+        justify-content: center;
+        @media (min-width: 768px){
+            justify-content: start;
+        }
+    }
+
+}

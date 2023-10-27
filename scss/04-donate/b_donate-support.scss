@@ -1,0 +1,38 @@
+.donate-support{
+	position: relative;
+	background-color: transparent;
+	.bg-section{
+		img{
+				object-position: right !important;
+		}
+	}
+	.support-content{
+		h2{
+			@include font2;
+			font-weight: 800;
+			font-size: 40px;
+			line-height: 56px;
+			color: $white;
+		}
+		.support-text{
+			@include font1;
+			color: $white;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 28px;
+
+		}
+	}
+	@media (max-width: 991.98px){
+		background-color: $primarylight;
+		.support-content{
+			h2{
+				font-size: 35px !important;
+			}
+			.btn-container{
+				justify-content: center;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,80 @@
+.section-equality{
+    padding: 70px 0 150px;
+    position: relative;
+    z-index: 0;
+    background-color: $grey;
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        width: 256px;
+        height: 348px;
+        background-size: cover;
+        background-image: url('../images/logo-grey.svg');
+        top: 50%;
+        @include center(0%, -50%);
+
+    }
+    @media (min-width: 768px){
+        &::after{
+            right: 50%;
+            @include center(50%, -50%);
+        }
+    }
+    @media (min-width: 1200px){
+        &::after{
+            width: 286px;
+            height: 385px;
+        }
+    }
+    .equality-quote{
+        position: relative;
+        z-index: 2;
+        span{
+            display: block;
+            text-align: center;
+        }
+        .quote, .quote > span{
+            @include font2;
+            font-size: 34px;
+            letter-spacing: -1.8px;
+            line-height: 1.15;
+            font-weight: 600;
+            &.primary{
+                color: $primary !important;
+            }
+            &.secondary{
+                color: $secondary !important;
+            }
+        }
+        .quote > span{
+            padding-top: 10px;
+        }
+        .quote-sig{
+            @include font1;
+            margin-top: 24px;
+            font-size: 18px;
+            line-height: 1.56;
+            color: $text;
+        }
+        @media (min-width: 7688px){
+            .quote, .quote > span{
+                @include font2;
+                font-size: 46px;
+                line-height: 1.13;
+                font-weight: 600;
+            }
+            .quote > span{
+                padding-top: 0px;
+            }
+            .quote-sig{
+                @include font1;
+                margin-top: 11px;
+                font-size: 22px;
+                line-height: 1.27;
+            }
+        }
+    }
+}

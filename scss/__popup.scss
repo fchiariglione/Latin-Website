@@ -1,0 +1,197 @@
+#button-play-popup{
+  background-color: transparent;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  border: none;
+  z-index: 3;
+  &.center{
+    @include center(-50%, -50%);
+    position: absolute;
+    bottom: unset;
+    left: 50%;
+    top: 50%;
+  }
+  &.left{
+    @include center(0%, -50%);
+    position: absolute;
+    bottom: unset;
+    left: 40px;
+    top: 50%;
+  }
+  &.left-bottom{
+    @include center(0%, 0%);
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    top: unset;
+    @media (max-width: 991.98px){
+      bottom: 20px;
+    }
+  }
+  &.right{
+    @include center(0%, -50%);
+    position: absolute;
+    bottom: unset;
+    left: unset;
+    right: 40px;
+    top: 50%;
+  }
+  &.right-bottom{
+    @include center(0%, 0%);
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    top: unset;
+    @media (max-width: 991.98px){
+      bottom: 20px;
+    }
+  }
+  &.center, &.left, &.left-bottom, &.right, &.right-bottom{
+    @media (max-width: 575.98px){
+      @include center(-50%, -50%);
+      position: absolute;
+      bottom: unset;
+      left: 50%;
+      top: 50%;
+    }
+  }
+  .playIframe{
+    background-image: url('../images/icons/play-button.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-size: contain;
+    @include resize(1,1);
+    border-radius: 50%;
+    display: inline-block;
+    flex: 0 0 auto;
+    height: 72px;
+    margin: 0;
+    transition: all 0.4s ease;
+    width: 72px;
+    z-index: 1;
+  }
+  .play-label{
+    color: #fff;
+    display: none;
+    font-size: 18px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.36px;
+    line-height: 2.17;
+    text-align: left;
+    margin-left: 21px;
+    @media (max-width: 575.98px){
+      display: none;
+    }
+  }
+  &:hover, &:focus{
+    outline: none;
+    .playIframe{
+      background-image: url('../images/icons/play-button-hover.svg');
+      @include resize(1.1,1.1);
+    }
+  }
+}
+.modal-backdrop.show{
+  opacity: 1;
+  background-color: rgba(119, 119, 118, 0.76);
+}
+body.admin-bar{
+  div[id*="myVideoModal"], #videoTextBlockModal{ 
+    .modal-content{
+      margin-top: 40px !important;
+    }
+  }
+}
+div[id*="myVideoModal"], #videoTextBlockModal{ 
+  padding-right: 0 !important;
+  .modal-xl, .modal-lg{
+    margin: 0 auto !important;
+    max-width: 80vw;
+    &:hover, &:focus, &.active{
+      .modal-content{
+        .modal-header{
+          .close{
+           top: 5%;
+           border: none;
+           @media (max-width: 1199.98px){
+            top: -10vh;
+           }
+           @media (max-width: 767.98px){
+            top: 10vh;
+           }
+          }
+        }
+      }
+    }
+  }
+  .modal-content{
+    background-color: #000;
+    //height: 80vh;
+    margin-top: 0;
+    .modal-header{
+      border-bottom: none;
+      padding: 0 !important;
+      .close{
+        background: #ffffff;
+        border-radius: 50%;
+        color: #000000;
+        float: none !important;
+        font-size: 50px;
+        left: 0;
+        margin: 0 auto!important;
+        opacity: 1;
+        padding: 0 !important;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: -25%;
+        transition: all 0.4s ease;
+        width: 50px; height: 50px;
+        z-index: 99;
+        span{
+          @include center(-50%, -50%);
+          bottom: unset;
+          display: block;
+          font-size: 0;
+          font-weight: 500;
+          height: 25px;
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          width: 25px;
+          &::after{
+            content: "";
+            background-image: url('../images/icons/close-menu.svg') !important;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            @include center(-50%, -50%);
+            position: absolute;
+            bottom: unset;
+            left: 50%;
+            top: 50%;
+            width: 25px;
+            height: 25px;
+          }
+        }
+        &:hover, &:focus, &.active{
+          background: rgba($color: #fff, $alpha: 1);
+          box-shadow: 0px 0px 0px 4px  rgba($color: #fff, $alpha: 0.5);
+          opacity: 1;
+          outline: none !important;
+        }
+      }
+    }   
+    .modal-body{
+      padding: 0 !important;
+    }
+    .modal-footer{
+      display: none;
+      border-top: 1px solid rgba($color: #fff, $alpha: 0.2);
+    }
+  }
+}

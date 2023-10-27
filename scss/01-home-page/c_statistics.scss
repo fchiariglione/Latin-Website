@@ -1,0 +1,135 @@
+.section-statistics{
+	padding: 100px 0 0;
+  position: relative;
+  background: $primary;
+  @media (min-width: 1200px){
+		background: linear-gradient(to right, $primary 0% 50% , $primarylight 50% 100%);
+		padding: 100px 0 90px;
+  }
+
+	.statistics-content{
+		position: relative;
+		padding-bottom: 60px;
+		.statistics-title, .section-title span{
+			@include font2;
+			font-size: 35px;
+			line-height: 1.17;
+			text-align: center;
+			display: block;
+			text-transform: none !important;
+		}
+		.statistics-title{
+			color: $white;
+			span{
+				color: $tertiary;
+			}
+		}
+		p{
+			@include font1;
+			color: $white;
+			text-align: center;
+		}
+		.btn-container{
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 60px;
+			.btn-1{
+				min-width: 90%;
+			}
+		}
+		@media (min-width: 768px){
+			.statistics-title, .section-title span{
+				font-size: 46px;
+			}
+			.btn-1{
+				min-width: auto;
+			}
+		}
+		@media (min-width: 1200px){
+			.statistics-title, .section-title span{
+				text-align: left;
+			}
+			p{
+				@include font1;
+				color: $white;
+				text-align: left;
+				padding-right: 30px;
+			}
+			.btn-container{
+				justify-content: flex-start;
+				.btn-1{
+					min-width: unset;
+				}
+			}
+		}
+	}
+	.statistics-data{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		position: relative;
+		padding-bottom: 60px;
+		&::after{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, 0);
+			display: block;
+			height: 100%;
+			width: 100vw;
+			background-color: $primarylight;
+		}
+		.statistics-item{
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-top: 30px;
+			row-gap: 20px;
+			z-index: 1;
+			.stat-img{
+				height: 100px;
+				width: 100px;
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				img{
+					object-fit: contain;
+					object-position: bottom
+				}
+			}
+			.counter-value{
+				@include font1;
+				font-size: 51px;
+				line-height: 1.02;
+				letter-spacing: -1.8px;
+				color: $white;
+			}
+			.stat-text{
+				@include font1;
+				font-size: 15px;
+				line-height: 24px;
+				text-align: center;
+				color: $tertiary;
+				padding: 0 15px;
+			}
+
+		}
+		@media (min-width: 768px){
+			.statistics-item{
+				margin-top: 0;
+				justify-content: flex-start;
+			}
+		}
+		@media (min-width: 1200px){
+			padding-bottom: 0;
+			&::after{
+				content: none;
+				display: none;
+			}
+		}
+	}
+
+}

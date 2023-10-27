@@ -1,0 +1,127 @@
+.text-list-block{
+  position: relative;
+  &.padding-vertical{
+    padding: 100px 0 70px;
+    @media (max-width: 1199.98px){
+      padding: 75px 0;
+    }
+    @media (max-width: 767.98px){
+      padding: 40px 0;
+    }
+  }
+  .row .right-side{
+    padding-left: 15px;
+    ul li p{
+      a{
+        color: $primary;
+      }
+      strong{
+        color: $primary;
+        a{
+          color: $primary;
+        }
+      }
+    }
+  }
+  h2,h3,h4,h5,h6{
+    @include font2;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  ul, ol{
+    padding-left: 0;
+    @media (max-width: 1199.98px){
+      padding-left: 0;
+    }
+    @media (max-width: 575.98px){
+      margin-top: 20px;
+    }
+    li{
+      margin-bottom: 35px !important;
+      padding-left: 21px !important;
+      list-style-type: none !important;
+      &::after{
+        content: "";
+        background-color: $primary;
+        border-radius: 100%;
+        display: block;
+        width: 8px;
+        height: 8px;
+        left: 0;
+        top: 8px;
+        position: absolute;
+      }
+      &::before{
+        content: none !important;
+      }
+    }
+    li, li p{
+      @include font1;
+      display: block;
+      font-size: 16px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: normal;
+      letter-spacing: normal;
+      line-height: 1.4;
+      position: relative;
+      strong{
+        font-weight: bold;
+        color: $primary !important;
+        a{
+          color: $primary !important;
+        }
+        &::selection {
+          background-color: $selector_color;
+          color: white;
+        }
+      }
+      &::selection {
+        background-color: $selector_color;
+        color: white;
+      }
+    }
+    ul,ol{
+      margin-top: 20px !important;
+    }
+    ul{
+      li{
+        padding-left: 30px !important;
+        &::after{
+          width: 20px;
+        }
+      }
+    }
+  }
+  .btn-container {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  &.bg-white-color, &.bg-grey-color{
+    p,span,strong,a:not([class*="btn"]),h2,h3,h4,h5,h6,ul > li, ul li > p, ol > li, ol li > p{
+      color: $primary !important;
+    }
+    ul, ol{
+      li::after{
+        background-color: $primary !important;
+      }
+    }
+  }
+  &.bg-primary-color, &.bg-black-color{
+    p,span,strong,a:not([class*="btn"]),h2,h3,h4,h5,h6,ul > li, ul li > p, ol > li, ol li > p{
+      color: $white !important;
+    }
+    ul, ol{
+      li::after{
+        background-color: $tertiary !important;
+      }
+    }
+  }
+  p,span,strong,a:not([class*="btn"]),h2,h3,h4,h5,h6,ul > li, ul li > p, ol > li, ol li > p{
+    color: $primary !important;
+  }
+}

@@ -1,0 +1,596 @@
+//@import "bootstrap.min.css";
+@import "font-awesome.css"; 
+@import "../scss/__mixins";
+@import "../scss/__media-queries";
+@import "../scss/__colors";
+@import "../scss/__fonts";
+@import "../scss/__buttons";
+@import "../scss/__footer";
+@import "../scss/__header";
+@import "../scss/__helpers";
+@import "../scss/__popup";
+@import "../scss/__sponsors-layout";
+@import "../scss/__boxes-footer";
+@import "../scss/__accordion-block";
+
+//Home
+@import "../scss/01-home-page/a_banner-home";
+@import "../scss/01-home-page/b_section-equality";
+@import "../scss/01-home-page/c_statistics";
+@import "../scss/01-home-page/d_section-approach";
+@import "../scss/01-home-page/e_spotlights";
+@import "../scss/01-home-page/f_section-volunteer";
+@import "../scss/01-home-page/g_section-news";
+
+
+//Internal blocks
+@import "../scss/02-blocks-interior/___general-blocks";
+@import "../scss/02-blocks-interior/a_textPhotoBlock";
+@import "../scss/02-blocks-interior/b_textPhotoBlock_2";
+@import "../scss/02-blocks-interior/c_textOnlyBlock";
+@import "../scss/02-blocks-interior/d_videoTextBlock";
+@import "../scss/02-blocks-interior/e_imageCarouselBlock";
+@import "../scss/02-blocks-interior/f_textListBlock";
+
+//Impact
+@import "../scss/03-impact/a_impact-serving";
+@import "../scss/03-impact/b_success";
+@import "../scss/03-impact/c_section-familia";
+
+//Donate
+@import "../scss/04-donate/a_donate-banner";
+@import "../scss/04-donate/b_giving";
+
+
+@import "../scss/_ajaxsearch-plugin";
+//@import "../scss/_breadcrumbs";
+@import "../scss/_form-ThemeMyLogin";
+@import "../scss/_gTranslate";
+@import "../scss/_gravityForm-default";
+@import "../scss/_gravityForm-sign-up";
+@import "../scss/_interior-banner";
+@import "../scss/_interior-comments";
+@import "../scss/_interior-ctgry-blog";
+@import "../scss/_interior-pages";
+@import "../scss/_page-404";
+@import "../scss/_pagination";
+//@import "../scss/_paid-membership-pro";
+@import "../scss/_search-page";
+@import "../scss/_single-blog";
+@import "../scss/_social-networks";
+@import "../scss/_team-bios";
+@import "../scss/_tribe-events_calendar";
+//@import "../scss/_comment-custom";
+//@import "../scss/_bb-press";
+//@import "../scss/_wpforms";
+@import "../scss/_browserupdate";
+
+
+body, body.page{
+  @include font1;
+  color: $text;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  main[role="main"], main{
+    overflow: hidden;
+    position: relative;
+    //padding-bottom: 50px;  
+  }
+  h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
+    @include font2;
+    font-stretch: normal;
+    font-weight: $title_weight;
+    margin-bottom: 30px;
+    margin-top: 0;
+    text-transform: capitalize;
+    &.h1{
+      font-size: $h1_size_desktop;
+      letter-spacing: normal;
+    }
+    &.h2{
+      font-size: $h2_size_desktop;
+      letter-spacing: normal;
+    }
+    &.h3{
+      font-size: $h3_size_desktop;
+      letter-spacing: normal;
+    }
+    &.h4{
+      font-size: $h4_size_desktop;
+      letter-spacing: normal;
+    }
+    &.h5{
+      font-size: $h5_size_desktop;
+      letter-spacing: normal;
+    }
+    &.h6{
+      font-size: $h6_size_desktop;
+      letter-spacing: normal;
+    }
+    &.has-primary-color{
+      color: $primary !important;
+    }
+    &.has-primarylight-color{
+      color: $primarylight !important;
+    }
+    &.has-primarydark-color{
+      color: $primarydark !important;
+    }
+    &.has-secondary-color{
+      color: $secondary !important;
+    }
+    &.has-secondarylight-color{
+      color: $secondarylight !important;
+    }
+    &.has-tertiary-color{
+      color: $tertiary !important;
+    }
+    &.has-tertiarylight-color{
+      color: $tertiarylight !important;
+    }
+    &.has-quaternary-color{
+      color: $quaternary !important;
+    }
+  }
+  h2, .h2{
+    font-size: $h2_size_desktop;
+    letter-spacing: -1.8px;
+    @media (max-width: 991.98px){
+      font-size: $h2_size_tablet;
+    }
+    @media (max-width: 575.98px){
+      font-size: $h2_size_mobile;
+    }
+  }
+  h3, .h3{
+    font-size: $h3_size_desktop;
+    letter-spacing: -1.8px;
+    line-height: 1.1 !important;
+    @media (max-width: 991.98px){
+      font-size: $h3_size_tablet;
+    }
+    @media (max-width: 575.98px){
+      font-size: $h3_size_mobile;
+    }
+  }
+  h4, .h4{
+    font-size: $h4_size_desktop;
+    letter-spacing: -1.8px;
+    @media (max-width: 991.98px){
+      font-size: $h4_size_tablet;
+    }
+    @media (max-width: 575.98px){
+      font-size: $h4_size_mobile;
+    }
+  }
+  h5, .h5{
+    font-size: $h5_size_desktop;
+    letter-spacing: -1.8px;
+    @media (max-width: 991.98px){
+      font-size: $h5_size_tablet;
+    }
+    @media (max-width: 575.98px){
+      font-size: $h5_size_mobile;
+    }
+  }
+  h6, .h6{
+    font-size: $h6_size_desktop;
+    letter-spacing: -1.8px;
+    line-height: 1.1 !important;
+  }
+  p, p strong, p em, ul li, ol li, ol li::marker{
+    @include font1;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1.44;
+    color: $text;
+  }
+  a:not([class*="btn-"]){
+    color: $link;
+    text-decoration: none;
+    border-color: transparent;
+  }
+  .title-block{
+    color: $primary;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+    text-transform: capitalize;
+    @include font2;
+    font-weight: 800;
+    @media (max-width: 575.98px){
+      text-align: center;
+    }
+    &.center{
+      text-align: center;
+      display: inline-block;
+      margin: 0 auto;
+      &::after{
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+    &.light-color{
+      color: $white;
+    }
+  }
+  .sub-title-block{
+    @include font1;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+body{
+  overflow-x: hidden;
+}
+body.page-template-no-banner{
+  //padding-top: 125px;
+  @media (max-width: 575.98px){
+    padding-top: 0;
+  }
+} 
+
+.bg-section + .container{
+  position: relative;
+  z-index: 5;
+}
+
+/**************************************************
+  Useful CSS on Theme
+**************************************************/
+
+.image-wrapping, .image-post-thumb, .post-image-css{
+  margin-bottom: 20px;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative; /* If you want text inside of it */
+  img , .wrapped-image{
+    @include center(-50%,-50%);
+    height: 100%;
+    left: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    &.image-fit-contain{
+      object-fit: contain !important;
+    }
+    &.top{
+      object-position: top;
+    }
+    &.center{
+      object-position: center;
+    }
+    &.bottom{
+      object-position: bottom;
+    }
+  }
+}
+
+.bg-section{
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  img{
+    @include center(-50%, -50%);
+    bottom: unset;
+    left: 50%; top: 50%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    width: 101% !important; height: 101% !important;
+    z-index: 1;
+    &.position-top{
+      object-position: top;
+    }
+    &.position-bottom{
+      object-position: bottom;
+    }
+  }
+  &.mask{
+    &::before{
+      content: "";
+      background-color: rgba($color: #231f20, $alpha: 0.55);
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+  &.mask-gradient.primary{
+    &::after{
+      background-image: linear-gradient(91deg, #003767 0%, rgba(19, 62, 99, 0.77) 36%, rgba(84, 84, 84, 0) 100%);
+    }
+  }
+  &.mask-gradient.black{
+    &::after{
+      background-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0) 100%);
+      opacity: 0.73;
+    }
+  }
+
+  &.mask-gradient.primarylight{
+    &::after{
+      content: "";
+      background: linear-gradient(90deg, #046BAC 47.31%, rgba(4, 107, 172, 0) 100%);
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+
+  &.mask-gradient{
+    &::after{
+      content: "";
+      background-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0) 100%);
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+  &.bg-fixed{
+    background-attachment: fixed;
+  }
+}
+
+.top-title-section{
+  @include font1;
+  display: block;
+  font-size: 15.5px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0.61px;
+  line-height: 1.23;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  &::selection {
+    background-color: $selector_color;
+    color: white;
+  }
+}
+
+.top-section{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  @media (max-width: 767.98px){
+    flex-wrap: wrap;
+  }
+  .left-side{
+    flex-basis: auto;
+    p, span{
+      display: block;
+      letter-spacing: normal;
+      line-height: 1.4;
+      margin-bottom: 10px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .right-side{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex: 0 0 200px;
+    @media (max-width: 767.98px){
+      justify-content: flex-start;
+      margin-top: 25px;
+      flex: 0 0 100%;
+    }
+    a{
+      margin: 0;
+      align-self: center;
+    }
+  }
+  &.light-color{
+    h2,h3,h4,h5,h6,p,span,strong,a,em{
+      color: $white !important;
+    }
+  }
+}
+
+span.purpule{
+  color: $tertiary;
+}
+
+.right-side{
+  position: relative;
+  .outside-container{
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    z-index: 40;
+    right: calc((100vw - 1300px)/(-2));
+    width: calc(100% + ((100vw - 1300px)/(2)));
+    @media (max-width: 1399.98px){
+      right: calc((100vw - 1100px)/(-2));
+      width: calc(100% + ((100vw - 1100px)/(2)));
+    }
+    @media (max-width: 1199.98px){
+      right: calc((100vw - 930px)/(-2));
+      width: calc(100% + ((100vw - 930px)/(2)));
+    }
+    @media (max-width: 991.98px){
+      right: calc((100vw - 690px)/(-2));
+      width: calc(100% + ((100vw - 690px)/(2)));
+    }
+    @media (max-width: 767.98px){
+      // right: calc((100vw - 510px)/(-2));
+      // width: calc(100% + ((100vw - 510px)/(2)));
+      margin: 0 auto;
+      max-width: 100%;
+      position: relative;
+      right: unset;
+      width: 100%;
+    }
+    .image-wrapping{
+      img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+      }
+    }
+  }
+}
+.left-side{
+  position: relative;
+  .outside-container{
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 40;
+    left: calc((100vw - 1300px)/(-2));
+    width: calc(100% + ((100vw - 1300px)/(2)));
+    @media (max-width: 1399.98px){
+      left: calc((100vw - 1100px)/(-2));
+      width: calc(100% + ((100vw - 1100px)/(2)));
+    }
+    @media (max-width: 1199.98px){
+      left: calc((100vw - 930px)/(-2));
+      width: calc(100% + ((100vw - 930px)/(2)));
+    }
+    @media (max-width: 991.98px){
+      left: calc((100vw - 690px)/(-2));
+      width: calc(100% + ((100vw - 690px)/(2)));
+    }
+    @media (max-width: 767.98px){
+      // left: calc((100vw - 510px)/(-2));
+      // width: calc(100% + ((100vw - 510px)/(2)));
+      left: unset;
+      margin-left: calc( -100vw / 2 + 100% / 2 ) !important;
+      margin-right: calc( -100vw / 2 + 100% / 2 ) !important;
+      max-width: 100%;
+      position: relative;
+      right: unset;
+      top: unset;
+      width: 100%;
+    } 
+    .image-wrapping{
+      img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.has-curve{
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 105vw;
+  height: 42px;
+  background-size: cover;
+  z-index: 2;
+  
+  &.white{
+    background-image: url('../images/curve-white.svg');
+    @media (max-width: 767.98px){
+      background-image: url('../images/curve-white-mobile.svg');
+    }
+  }
+  &.grey{
+    background-image: url('../images/curve-grey.svg');
+    @media (max-width: 767.98px){
+      background-image: url('../images/curve-grey-mobile.svg');
+    }
+  }
+  &.primary{
+    background-image: url('../images/curve-primary.svg');
+    @media (max-width: 767.98px){
+      background-image: url('../images/curve-primary-mobile.svg');
+    }
+  }
+  &.tertiary{
+    background-image: url('../images/curve-tertiary.svg');
+  }
+  &.tertiarylight{
+    background-image: url('../images/curve-tertiarylight.svg');
+
+    @media (max-width: 767.98px){
+      background-image: url('../images/curve-tertiarylight-mobile.svg');
+    }
+  }
+  &.outside-bottom{
+    bottom: -41px;
+    @media (max-width: 767.98px){
+      bottom: -33px;
+    }
+  }
+  &.outside-top{
+    top: -41px;
+    @media (max-width: 767.98px){
+      top: -33px;
+    }
+  }
+  &.inside-bottom{
+    bottom: -1px;
+    @media (max-width: 767.98px){
+      bottom: -1px;
+    }
+  }
+  &.inside-top{
+    top: -1px;
+    @media (max-width: 767.98px){
+      top: -1px;
+    }
+  }
+  &.rotate{
+    transform: translateX(-50%) scaleY(-1);
+  }
+
+  @media (max-width: 767.98px){
+    height: 35px;
+  }
+
+}
+
+/**************************************************
+  Useful CSS Homepage/Page/Template
+**************************************************/
+
+/**************************************************
+  general CSS overwriting
+**************************************************/
+html,body{
+  -webkit-font-smoothing: subpixel-antialiased;
+  figure{
+    margin-bottom: 0 !important;
+  }  
+  .selector-for-some-widget {
+    box-sizing: content-box;
+  }
+}
+/**************************************************
+  general CSS overwriting
+**************************************************/

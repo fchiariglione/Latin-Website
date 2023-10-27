@@ -1,0 +1,115 @@
+.section-giving{
+	position: relative;
+	background-color: $white;
+	padding: 40px 0 0px;
+    &::after{
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+        width: 565px;
+        height: 797px;
+        background-image: url('../images/logo-grey.svg');
+        background-size: cover;
+        background-position: left;
+        z-index: 0;
+        transform: scaleX(-1);
+    }
+	.container{
+		position: relative;
+		.giving-row{
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 40px;
+			.giving-title{
+				@include font2;
+				font-style: normal;
+                font-weight: 600;
+                font-size: 51px;
+                line-height: 52px;
+				text-align: center;
+				letter-spacing: -1.8px;
+				color: $primarydark;
+				@media (min-width: 768px){
+					font-size: 46px;
+					line-height: 52px;
+				}
+			}
+			.giving-text{
+				@include font1;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 26px;
+				text-align: center;
+				color: $primarydark;
+			}
+		}
+		.giving-items{
+			justify-content: space-evenly;
+			row-gap: 50px;
+			position: relative;
+			align-items: start;
+			.giving-item{
+				position: relative;
+				z-index: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: start;
+				align-items: center;
+				flex: 1 1 auto;
+				max-width: 300px;
+				row-gap: 30px;
+				.giving-item-image{
+					width: 174px;
+					height: 174px;
+					margin: auto;		
+					img{
+						object-fit: cover;
+						object-position: center;
+						width: 100%;
+						height: 100%;
+						border-radius: 100%;
+					}
+				}
+				.giving-item-title{
+					@include font1;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 46px;
+					line-height: 52px;
+					letter-spacing: -1.8px;
+					text-transform: capitalize;
+					color: $primarydark;
+					text-align: center;
+				}
+				.giving-item-text{
+					@include font2;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 26px;
+					text-align: center;
+					color: $primarydark;
+				}
+				
+			}
+		}
+		.btn-container{
+            position: relative;
+            z-index: 1;
+			justify-content: center;
+			margin: 51px 0 100px;
+		}
+        .img-giving{
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            img{
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+	}
+}
